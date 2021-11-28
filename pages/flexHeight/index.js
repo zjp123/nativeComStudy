@@ -6,11 +6,13 @@ import {
   StyleSheet,
   Text,
   View,
+  ImageBackground,
   Image,
   Platform,
   // TouchableOpacity,
 } from 'react-native';
-
+// const image = { uri: "http://img.58cdn.com.cn/dist/jxt/images/Simulator/mnqTopbg.png" };
+const image = { uri: "https://zh-hans.reactjs.org/logo-og.png" };
 const App = () => {
   const [selectedId, setSelectedId] = useState(null);
 
@@ -21,13 +23,19 @@ const App = () => {
           <Text style={styles.textbox}>看舒克舒克是</Text>
         </View>
         <View style={styles.borderYYY}>
-          <Text>阿拉啦啦啦啦啦啦</Text>
+          <Text style={{textDecorationLine: 'underline'}}>阿拉啦啦啦啦啦啦</Text>
         </View>
         {/* <Text style={styles.lines}>rr</Text> */}
         <View style={styles.lines}></View>
         <View style={styles.linesHHH}></View>
-
+        <View style={styles.sha}>
+          <ImageBackground resizeMode='contain' style={styles.imgBox} source={image}>
+            <Text>Inside</Text>
+          </ImageBackground>
+          {/* <Image style={styles.imgBox} source={image}></Image> */}
+        </View>
      </View>
+     
   )
 };
 
@@ -39,6 +47,12 @@ const App = () => {
 // 请在此属性中指定。同时此数据在修改时也需要先修改其引用地址（比如先复制到一个新的 Object 或者数组中），然后再修改其值，否则界面很可能不会刷新。
 
 const styles = StyleSheet.create({
+  sha: {
+    marginTop: 100,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'red'
+  },
   container: {
     flex: 1,
     marginTop: 50,
@@ -95,6 +109,13 @@ const styles = StyleSheet.create({
     width: 0,
     height: 20,
     borderStyle: 'dashed',
+  },
+  imgBox: {
+    width: '100%',
+    height: 86,
+    // resizeMode: "cover",
+    // resizeMode: "contain",
+    justifyContent: "center"
   }
 });
 
