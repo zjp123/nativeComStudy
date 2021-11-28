@@ -23,6 +23,10 @@ const App = () => {
         <View style={styles.borderYYY}>
           <Text>阿拉啦啦啦啦啦啦</Text>
         </View>
+        {/* <Text style={styles.lines}>rr</Text> */}
+        <View style={styles.lines}></View>
+        <View style={styles.linesHHH}></View>
+
      </View>
   )
 };
@@ -63,9 +67,34 @@ const styles = StyleSheet.create({
   },
   borderYYY: {
     marginTop: 50,
-    borderTopColor: 'red',
-    borderTopWidth: 1,
+    borderColor: 'red',
+    borderWidth: 1,
     borderStyle: 'dotted'
+  },
+  lines: {
+    marginTop: 20,
+    borderColor: 'blue',
+    borderWidth: 0.5,
+    height: 0,
+    borderStyle: 'dashed',
+    // borderBottomColor: 'transparent',
+    // borderBottomWidth: 0,
+    // // borderTopWidth: 1,
+    // borderLeftColor: 'transparent',
+    // borderLeftWidth: 0,
+    // borderRightWidth: 0,
+
+    // borderRightColor: 'transparent',
+    // borderRadius: 1
+  },
+  linesHHH: {
+    marginTop: 20,
+    marginLeft: 50,
+    borderColor: 'red',
+    borderWidth: 0.5,
+    width: 0,
+    height: 20,
+    borderStyle: 'dashed',
   }
 });
 
